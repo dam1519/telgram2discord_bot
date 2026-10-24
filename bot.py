@@ -36,6 +36,7 @@ class TelegramSide(IMessenger):
 
     async def start(self, message: types.Message):
         await message.answer("ПРИВЕТ ЗДОРОВЯЯК!!! Я ПРИШЕЛ ЧТОБЫ ПОСПАТЬ С ТОБОЙ ПОД ОДНИМ ОДЕЯЛКОМ! БЕЗ ОДЕЖДЫ! ТОЛЬКО НАДЕНЬ ТЕ КОШАЧЬИ УШКИ ЧТО Я ТЕБЕ ДАРИЛ! Я ЖЕ ЗНАЮ ЧТО ТЫ ЭТО ТАК ХОЧЕШЬ! ДАВАЙ! ДАВАЙ! ДАВАЙ!.")
+        print(message.chat.id)
 
     async def _msg_tg_get(self, msg: types.Message):
         if not msg.from_user.is_bot and msg.chat.id == self.chat:
