@@ -5,21 +5,23 @@
 
 ## english 
 
-### desription
+### description
 
-This bot solves the problem of Discord and Telegram 
-not being a single messenger by forwarding messages 
+This bot solves the problem 
+of Discord and Telegram being 
+separate platforms by forwarding messages 
 from Telegram to Discord and vice versa.
 
 ### how to run
 
-you need run these command in cmd
+you need to run these command in cmd
 
 ```
-pip istall discord aiogram dotenv
+pip install discord.py aiogram python-dotenv
 ```
 
-next you need enter values to .env file. by example
+Next, you need to enter the values 
+into a .env file, following this example
 
 ```
 DISCORD_TOKEN="mMmmMmmMMmMMmMMMmmMMMMMMMMMMMMMmmmmmmmmmmmmmmmmmmmmmmmmmmmMMMMMm"
@@ -38,7 +40,7 @@ python bot.py
 
 #### 1.0
 
-release in open web and readme
+public release and readme
 
 ## русский
 
@@ -53,7 +55,7 @@ release in open web and readme
 для начала нужно запустить эти команды в командной строке
 
 ```
-pip istall discord aiogram dotenv
+pip install discord.py aiogram python-dotenv
 ```
 
 потом нужно заполнить .env файл как в примере
