@@ -14,7 +14,7 @@ from Telegram to Discord and vice versa.
 
 ### how to run
 
-you need to run these command in cmd
+you need to run this command in cmd
 
 ```
 pip install discord.py aiogram python-dotenv
