@@ -17,7 +17,7 @@ class IMessenger(ABC):
         pass
 
     @abstractmethod
-    async def send_msg(self, msg_text: str):
+    async def send_msg(self, msg_text: str, author: str):
         pass
 
 class TelegramSide(IMessenger):
@@ -40,10 +40,10 @@ class TelegramSide(IMessenger):
 
     async def _msg_tg_get(self, msg: types.Message):
         if not msg.from_user.is_bot and msg.chat.id == self.chat:
-            await self.send_msg(msg.text)
+            await self.send_msg(msg.text, msg.from_user.full_name)
 
-    async def send_msg(self, msg_text: str):
-        msg = {"id" : "tg", "text" : msg_text}
+    async def send_msg(self, msg_text: str, author: str):
+        msg = {"id" : "tg", "text" : f"{author}: {msg_text}"}
         await self.queue.put(msg)
 
     async def get_msg(self, msg: str):
@@ -70,10 +70,10 @@ class DiscordSide(IMessenger):
     async def _msg_ds_get(self, msg):
         if msg.author != self.bot.user and msg.channel.id == self.chat:
             if msg.content:
-                await self.send_msg(msg.content)
+                await self.send_msg(msg.content, msg.author.name)
 
-    async def send_msg(self, msg_text: str):
-        msg = {"id" : "ds", "text" : msg_text}
+    async def send_msg(self, msg_text: str, author: str):
+        msg = {"id" : "ds", "text" : f"{author}: {msg_text}"}
         await self.queue.put(msg)
 
     async def get_msg(self, msg: str):

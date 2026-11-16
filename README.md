@@ -42,6 +42,10 @@ python bot.py
 
 public release and readme
 
+#### 1.1
+
+Updated the forwarded message format. Now, the sender's username from the other platform appears before the message.
+
 ## русский
 
 ### описание
@@ -78,3 +82,7 @@ python bot.py
 #### 1.0
 
 релиз в открытую сеть и readme
+
+#### 1.1
+
+изменение формата передаваемого текста. теперь перед сообщением есть ник автора из другого мессенджера 
